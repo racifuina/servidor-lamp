@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check input errors before inserting in database
     if(empty($name_err) && empty($puesto_err)){
         // Prepare an insert statement
-        $sql = "INSERT INTO employees (name, puesto) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO employees (name, puesto) VALUES (?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
@@ -76,7 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="mt-5">Create Record</h2>
+                    <h2 class="mt-5">Registrar Empleado</h2>
                     <p>Llene el formulario para registrar un nuevo empleado.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
@@ -90,7 +90,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <span class="invalid-feedback"><?php echo $puesto_err;?></span>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Guardar">
-                        <a href="index.php" class="btn btn-secondary ml-2">Cancel</a>
+                        <a href="index.php" class="btn btn-secondary ml-2">Cancelar</a>
                     </form>
                 </div>
             </div>        
