@@ -3,8 +3,8 @@
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$name = $puesto = = "";
-$name_err = $puesto_err = "";
+$name = $address = $salary = "";
+$name_err = $address_err = $salary_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -18,31 +18,42 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $name = $input_name;
     }
     
-    // Validate puesto
-    $input_puesto = trim($_POST["puesto"]);
-    if(empty($input_puesto)){
-        $puesto_err = "Por favor ingrese un puesto.";     
+    // Validate address
+    $input_address = trim($_POST["address"]);
+    if(empty($input_address)){
+        $address_err = "Please enter an address.";     
     } else{
-        $puesto = $input_puesto;
+        $address = $input_address;
     }
-
+    
+    // Validate salary
+    $input_salary = trim($_POST["salary"]);
+    if(empty($input_salary)){
+        $salary_err = "Please enter the salary amount.";     
+    } elseif(!ctype_digit($input_salary)){
+        $salary_err = "Please enter a positive integer value.";
+    } else{
+        $salary = $input_salary;
+    }
+    
     // Check input errors before inserting in database
-    if(empty($name_err) && empty($puesto_err) && empty($salary_err)){
+    if(empty($name_err) && empty($address_err) && empty($salary_err)){
         // Prepare an insert statement
-        $sql = "INSERT INTO employees (name, puesto) VALUES (?, ?)";
+        $sql = "INSERT INTO employees (name, address, salary) VALUES (?, ?, ?)";
          
         if($stmt = mysqli_prepare($link, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_name, $param_puesto);
+            mysqli_stmt_bind_param($stmt, "sss", $param_name, $param_address, $param_salary);
             
             // Set parameters
             $param_name = $name;
-            $param_puesto = $puesto;
+            $param_address = $address;
+            $param_salary = $salary;
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Records created successfully. Redirect to landing page
-                header("location: empleados.php");
+                header("location: index.php");
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -62,8 +73,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Crear Empleado</title>
-    <link rel="stylesheet" href="./bootstrap.min.css">
+    <title>Create Record</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         .wrapper{
             width: 600px;
@@ -76,21 +87,26 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="mt-5">Crear empleado</h2>
-                    <p>Llene el formulario para agregar un empleado al sistema.</p>
+                    <h2 class="mt-5">Create Record</h2>
+                    <p>Please fill this form and submit to add employee record to the database.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                         <div class="form-group">
-                            <label>Nombre</label>
+                            <label>Name</label>
                             <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>">
                             <span class="invalid-feedback"><?php echo $name_err;?></span>
                         </div>
                         <div class="form-group">
-                            <label>Puesto</label>
-                            <textarea name="puesto" class="form-control <?php echo (!empty($puesto_err)) ? 'is-invalid' : ''; ?>"><?php echo $puesto; ?></textarea>
-                            <span class="invalid-feedback"><?php echo $puesto_err;?></span>
+                            <label>Address</label>
+                            <textarea name="address" class="form-control <?php echo (!empty($address_err)) ? 'is-invalid' : ''; ?>"><?php echo $address; ?></textarea>
+                            <span class="invalid-feedback"><?php echo $address_err;?></span>
                         </div>
-                        <input type="submit" class="btn btn-primary" value="Guardar">
-                        <a href="index.php" class="btn btn-secondary ml-2">Cancelar</a>
+                        <div class="form-group">
+                            <label>Salary</label>
+                            <input type="text" name="salary" class="form-control <?php echo (!empty($salary_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $salary; ?>">
+                            <span class="invalid-feedback"><?php echo $salary_err;?></span>
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Submit">
+                        <a href="index.php" class="btn btn-secondary ml-2">Cancel</a>
                     </form>
                 </div>
             </div>        
