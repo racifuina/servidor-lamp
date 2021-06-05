@@ -90,7 +90,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <span class="invalid-feedback"><?php echo $puesto_err;?></span>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Guardar">
-                        <a href="index.php" class="btn btn-secondary ml-2">Cancelar</a>
+                        <a href="./empleados.php" class="btn btn-secondary ml-2">Cancelar</a>
                     </form>
                 </div>
             </div>        
