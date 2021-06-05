@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Eempleados</title>
+    <title>Empleados</title>
     <link rel="stylesheet" href="./bootstrap.min.css">
-    <link rel="stylesheet" href="./font-awesome.min.css">
     <script src="./jquery-3.5.1.min.js"></script>
     <script src="./popper.min.js"></script>
     <script src="./bootstrap.min.js"></script>
@@ -29,8 +28,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
-                        <h2 class="pull-left">Detalle de Empleado</h2>
-                        <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Agregar empleado</a>
+                        <h2 class="pull-left">Empleados</h2>
+                        <a href="./create.php" class="btn btn-success pull-right">Agregar empleado</a>
                     </div>
                     <?php
                     // Include config file
