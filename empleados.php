@@ -9,11 +9,8 @@
     <script src="./bootstrap.min.js"></script>
     <style>
         .wrapper{
-            width: 600px;
+            width: 1200px;
             margin: 0 auto;
-        }
-        table tr td:last-child{
-            width: 120px;
         }
     </style>
     <script>
