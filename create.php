@@ -86,7 +86,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         </div>
                         <div class="form-group">
                             <label>Puesto</label>
-                            <textarea name="puesto" class="form-control <?php echo (!empty($puesto_err)) ? 'is-invalid' : ''; ?>"><?php echo $puesto; ?></textarea>
+                            <input type="text" name="puesto" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $puesto; ?>">
                             <span class="invalid-feedback"><?php echo $puesto_err;?></span>
                         </div>
                         <input type="submit" class="btn btn-primary" value="Guardar">
