@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Crear Empleado</title>
-    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
     <style>
         .wrapper{
             width: 600px;

@@ -75,7 +75,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Restablecer contraseña</title>
-    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
     <style>
         body{ font: 14px sans-serif; }
         .wrapper{ width: 360px; padding: 20px; }
