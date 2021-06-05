@@ -30,6 +30,7 @@
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Empleados</h2>
                         <a href="./create.php" class="btn btn-success pull-right">Agregar empleado</a>
+                        <a href="./asistencias.php" class="btn btn-primary pull-right">Asistencias</a>
                     </div>
                     <?php
                     // Include config file
@@ -45,7 +46,6 @@
                                         echo "<th>#</th>";
                                         echo "<th>Nombre</th>";
                                         echo "<th>Puesto</th>";
-                                        echo "<th>Opciones</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
@@ -54,9 +54,6 @@
                                         echo "<td>" . $row['id'] . "</td>";
                                         echo "<td>" . $row['name'] . "</td>";
                                         echo "<td>" . $row['puesto'] . "</td>";
-                                        echo "<td>";
-                                            echo '<a href="delete.php?id='. $row['id'] .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
-                                        echo "</td>";
                                     echo "</tr>";
                                 }
                                 echo "</tbody>";                            

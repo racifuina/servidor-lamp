@@ -26,8 +26,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <a href="logout.php" class="btn btn-danger ml-3">Cerrar Sesión</a>
     </p>
     <p>
-        <a href="empleados.php" class="btn btn-primary ml-3">Empleados</a>
-        <a href="asistencias.php" class="btn btn-primary ml-3">Asistencia</a>
+        <a href="./empleados.php" class="btn btn-primary ml-3">Empleados</a>
+        <a href="./asistencias.php" class="btn btn-primary ml-3">Asistencia</a>
     </p>
 </body>
 </html>
