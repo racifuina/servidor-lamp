@@ -28,6 +28,7 @@
                         <h2 class="pull-left">Empleados</h2>
                         <a href="./create.php" class="btn btn-success pull-right">Agregar empleado</a>
                         <a href="./asistencias.php" class="btn btn-primary pull-right">Asistencias</a>
+                        <a href="./welcome.php" class="btn btn-secondary ml-2">Inicio</a>
                     </div>
                     <?php
                     // Include config file

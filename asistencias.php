@@ -28,6 +28,7 @@
                         <h2 class="pull-left">Assitencias</h2>
                         <a href="./asistencia.php" class="btn btn-success pull-right">Registrar Asistencia</a>
                         <a href="./empleados.php" class="btn btn-primary pull-right">Empleados</a>
+                        <a href="./welcome.php" class="btn btn-secondary ml-2">Inicio</a>
                     </div>
                     <?php
                     // Include config file

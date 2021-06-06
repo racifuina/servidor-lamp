@@ -22,13 +22,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <body>
     <h1 class="my-5">Hola, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Bienvenido al sistema de asistencia.</h1>
     <p>
-        <a href="reset-password.php" class="btn btn-warning">Restablecer contraseña</a>
-        <a href="logout.php" class="btn btn-danger ml-3">Cerrar Sesión</a>
+        <a href="./empleados.php" class="btn btn-primary mx-3">Empleados</a>
+        <a href="./asistencias.php" class="btn btn-primary mx-3">Asistencia</a>
     </p>
-    <p>
-        <a href="./empleados.php" class="btn btn-primary ml-3">Empleados</a>
-        <a href="./asistencias.php" class="btn btn-primary ml-3">Asistencia</a>
+    <hr />
+    <p class="mt-5">
+    Opciones de cuenta
     </p>
+    
+    <p class="mt-5">
+        <a href="reset-password.php" class="btn btn-warning mx">Cambiar contraseña</a>
+        <a href="logout.php" class="btn btn-danger mx-3">Cerrar Sesión</a>
+    </p>
+    
 </body>
 </html>
 
