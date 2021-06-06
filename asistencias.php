@@ -34,7 +34,7 @@
                     require_once "config.php";
                     
                     // Attempt select query execution
-                    $sql = "SELECT asistencias.id, empleados.name, asistencias.fecha FROM asistencias left join empleados on asistecias.empleado_id = empleados.id";
+                    $sql = "SELECT * FROM asistencias left join employees on asistencias.empleado_id = employees.id";
                     if($result = mysqli_query($link, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo '<table class="table table-bordered table-striped">';
