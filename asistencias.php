@@ -27,9 +27,9 @@
                     <div class="mt-5 mb-3 clearfix border-bottom" >
                         <h2 class="pull-left">Asistencias</h2>
                     </div>
-                    <div> 
-                    <a href="./welcome.php" class="btn btn-secondary mr-2">Inicio</a>
-                    <a href="./asistencia.php" class="btn btn-success pull-right">Registrar Asistencia</a>
+                    <div class="mb-5"> 
+                        <a href="./welcome.php" class="btn btn-secondary mr-2">Inicio</a>
+                        <a href="./asistencia.php" class="btn btn-success pull-right">Registrar Asistencia</a>
                     </div>
                     <?php
                     // Include config file

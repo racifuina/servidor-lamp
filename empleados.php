@@ -24,8 +24,10 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="mt-5 mb-3 clearfix">
+                    <div class="mt-5 mb-3 clearfix border-bottom" >
                         <h2 class="pull-left">Empleados</h2>
+                    </div>
+                    <div class="mb-5"> 
                         <a href="./welcome.php" class="btn btn-secondary mr-2">Inicio</a>
                         <a href="./create.php" class="btn btn-success pull-right">Agregar empleado</a>
                     </div>
