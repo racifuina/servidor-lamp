@@ -26,9 +26,8 @@
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Empleados</h2>
+                        <a href="./welcome.php" class="btn btn-secondary mr-2">Inicio</a>
                         <a href="./create.php" class="btn btn-success pull-right">Agregar empleado</a>
-                        <a href="./asistencias.php" class="btn btn-primary pull-right">Asistencias</a>
-                        <a href="./welcome.php" class="btn btn-secondary ml-2">Inicio</a>
                     </div>
                     <?php
                     // Include config file
