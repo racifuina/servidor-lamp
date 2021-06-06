@@ -66,7 +66,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="./bootstrap.min.css">
     <style>
         .wrapper{
-            width: 600px;
+            width: 1200px;
             margin: 0 auto;
         }
     </style>
