@@ -23,7 +23,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <h1 class="my-5">Hola, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Bienvenido al sistema de asistencia.</h1>
     <p>
         <a href="./empleados.php" class="btn btn-primary mx-3">Empleados</a>
-        <a href="./asistencias.php" class="btn btn-primary mx-3">Asistencia</a>
+        <a href="./asistencias.php" class="btn btn-primary mx-3">Asistencias</a>
     </p>
     <hr />
     <p class="mt-5">
